@@ -1,0 +1,10 @@
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\bin\Debug\netstandard2.0\LeptonDaisyBuff.deps.json
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\bin\Debug\netstandard2.0\LeptonDaisyBuff.dll
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\bin\Debug\netstandard2.0\LeptonDaisyBuff.pdb
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.csproj.AssemblyReference.cache
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.AssemblyInfoInputs.cache
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.AssemblyInfo.cs
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.csproj.CoreCompileInputs.cache
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.dll
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.pdb
