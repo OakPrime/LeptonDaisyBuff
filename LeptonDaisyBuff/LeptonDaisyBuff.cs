@@ -54,11 +54,10 @@ namespace LeptonDaisyBuff
                     c.Emit(OpCodes.Ldloc_2);
                     c.EmitDelegate<Action<RoR2.HealthComponent>>(healthComponent =>
                     {
-                        Util.CleanseBody(healthComponent.body, true, false, true, true, true, false);
+                        Util.CleanseBody(healthComponent.body, true, false, true, true, true, true);
                     });
 
                 };
-
                 IL.EntityStates.TeleporterHealNovaController.TeleporterHealNovaGeneratorMain.CalculatePulseCount += (il) =>
                 {
                     ILCursor c = new ILCursor(il);
@@ -79,17 +78,18 @@ namespace LeptonDaisyBuff
                         }
                     });
                 };
-
+                this.UpdateText();
             }
             catch (Exception e)
             {
                 Logger.LogError(e.Message + " - " + e.StackTrace);
             };
         }
-        private void ReplaceSecondaryText()
+        private void UpdateText()
         {
-            this.ReplaceString("HUNTRESS_SECONDARY_DESCRIPTION", "Throw a seeking glaive that bounces up to <style=cIsDamage>6</style> times for <style=cIsDamage>250% damage</style>" +
-                ". Damage increases by <style=cIsDamage>15%</style> per bounce.");
+            this.ReplaceString("ITEM_TPHEALINGNOVA_DESC", "Release a <style=cIsHealing>healing nova</style> during the Teleporter event, <style=cIsHealing>cleansing</style>"
+                + " and <style=cIsHealing>healing</style> all nearby allies for <style=cIsHealing>50%</style> of their maximum health. Occurs "
+                + "<style=cIsHealing>2</style> <style=cStack>(+1 per stack)</style> times.");
         }
 
         private void ReplaceString(string token, string newText)
