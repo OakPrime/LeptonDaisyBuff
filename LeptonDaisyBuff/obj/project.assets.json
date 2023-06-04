@@ -165,24 +165,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "R2API/4.3.5": {
-        "type": "package",
-        "dependencies": {
-          "BepInEx.Core": "5.4.19",
-          "RiskOfRain2.GameLibs": "1.2.2-r.0",
-          "UnityEngine.Modules": "2019.4.26"
-        },
-        "compile": {
-          "lib/netstandard2.0/R2API.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/R2API.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "RiskOfRain2.GameLibs/1.2.4-r.0": {
         "type": "package",
         "compile": {
@@ -1066,19 +1048,6 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
-      ]
-    },
-    "R2API/4.3.5": {
-      "sha512": "+6QC1X5YizcfHo3MuU2KpMUsZ5qMfpC37ELCfe3Jo2hIXM05pJ+wYxg3uPjNBPcIBE+FIioah2Zt3iY27qlSRA==",
-      "type": "package",
-      "path": "r2api/4.3.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/R2API.dll",
-        "lib/netstandard2.0/R2API.xml",
-        "r2api.4.3.5.nupkg.sha512",
-        "r2api.nuspec"
       ]
     },
     "RiskOfRain2.GameLibs/1.2.4-r.0": {
@@ -2975,7 +2944,6 @@
       "BepInEx.Core >= 5.4.19",
       "MMHOOK.RoR2 >= 2022.4.19",
       "NETStandard.Library >= 2.0.3",
-      "R2API >= 4.3.5",
       "RiskOfRain2.GameLibs >= 1.2.4-r.0",
       "UnityEngine.Modules >= 2019.4.26"
     ]
@@ -3050,10 +3018,6 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
-          },
-          "R2API": {
-            "target": "Package",
-            "version": "[4.3.5, )"
           },
           "RiskOfRain2.GameLibs": {
             "target": "Package",

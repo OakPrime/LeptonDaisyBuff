@@ -8,3 +8,5 @@ C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2
 C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.csproj.CoreCompileInputs.cache
 C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.dll
 C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.pdb
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\bin\Debug\netstandard2.0\R2API.Language.dll
+C:\Users\Dan\source\repos\LeptonDaisyBuff\LeptonDaisyBuff\obj\Debug\netstandard2.0\LeptonDaisyBuff.csproj.CopyComplete

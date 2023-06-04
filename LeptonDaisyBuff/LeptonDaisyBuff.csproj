@@ -23,7 +23,6 @@
     <PackageReference Include="MMHOOK.RoR2" Version="2022.4.19">
       <NoWarn>NU1701</NoWarn>
     </PackageReference>
-    <PackageReference Include="R2API" Version="4.3.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +53,9 @@
     <Reference Include="ProBuilderMeshOps">
       <HintPath>libs\ProBuilderMeshOps.dll</HintPath>
       <Private>false</Private>
+    </Reference>
+    <Reference Include="R2API.Language">
+      <HintPath>libs\R2API.Language.dll</HintPath>
     </Reference>
     <Reference Include="Rewired_Windows_Lib">
       <HintPath>libs\Rewired_Windows_Lib.dll</HintPath>

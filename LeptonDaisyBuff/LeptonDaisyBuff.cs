@@ -3,17 +3,8 @@ using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using RoR2;
 using System;
-using R2API;
-using R2API.Utils;
 using System.Collections.Generic;
-using UnityEngine;
-using EntityStates;
-using IL.RoR2.Projectile;
-using RoR2.Projectile;
-using On.RoR2.Projectile;
-using ProjectileDotZone = RoR2.Projectile.ProjectileDotZone;
-using UnityEngine.UIElements;
-using BepInEx.Logging;
+using R2API;
 
 namespace LeptonDaisyBuff
 {
@@ -26,14 +17,14 @@ namespace LeptonDaisyBuff
 
     //This is the main declaration of our plugin class. BepInEx searches for all classes inheriting from BaseUnityPlugin to initialize on startup.
     //BaseUnityPlugin itself inherits from MonoBehaviour, so you can use this as a reference for what you can declare and use in your plugin class: https://docs.unity3d.com/ScriptReference/MonoBehaviour.html
-    public class HuntersHarpoonRework : BaseUnityPlugin
+    public class LeptonDaisyBuff : BaseUnityPlugin
     {
         //The Plugin GUID should be a unique ID for this plugin, which is human readable (as it is used in places like the config).
         //If we see this PluginGUID as it is on thunderstore, we will deprecate this mod. Change the PluginAuthor and the PluginName !
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "OakPrime";
         public const string PluginName = "LeptonDaisyBuff";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
 
         private readonly Dictionary<string, string> DefaultLanguage = new Dictionary<string, string>();
 
