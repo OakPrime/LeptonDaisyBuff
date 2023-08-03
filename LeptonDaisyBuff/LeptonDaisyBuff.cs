@@ -24,7 +24,7 @@ namespace LeptonDaisyBuff
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "OakPrime";
         public const string PluginName = "LeptonDaisyBuff";
-        public const string PluginVersion = "1.0.1";
+        public const string PluginVersion = "1.1.0";
 
         private readonly Dictionary<string, string> DefaultLanguage = new Dictionary<string, string>();
 
@@ -49,25 +49,37 @@ namespace LeptonDaisyBuff
                     });
 
                 };
-                IL.EntityStates.TeleporterHealNovaController.TeleporterHealNovaGeneratorMain.CalculatePulseCount += (il) =>
+                IL.EntityStates.TeleporterHealNovaController.TeleporterHealNovaPulse.OnEnter += (il) =>
                 {
                     ILCursor c = new ILCursor(il);
                     c.TryGotoNext(
-                        x => x.MatchLdloc(out _),
-                        x => x.MatchRet()
+                        x => x.MatchLdcR4(out _)
                     );
+                    c.Next.Operand = 0.35f;
+                };
+                IL.EntityStates.TeleporterHealNovaController.TeleporterHealNovaGeneratorMain.CalculateNextPulseFraction += (il) =>
+                {
+                    ILCursor c = new ILCursor(il);
+                    c.TryGotoNext(x => x.MatchLdcI4(out _));
+                    c.Emit(OpCodes.Ldc_I4_2);
+                    c.Emit(OpCodes.Mul);
+                    c.TryGotoNext(x => x.MatchMul());
                     c.Index++;
-                    c.EmitDelegate<Func<int, int>>(num =>
+                    c.Emit(OpCodes.Ldarg_1);
+                    c.EmitDelegate<Func<float, float, float>>((nextPulseFraction, prevPulseFraction) =>
                     {
-                        if (num > 0)
+                        Log.LogInfo("PREVIOUS FRAC: " + prevPulseFraction);
+                        if (prevPulseFraction < 0.01f)
                         {
-                            return num + 1;
+                            return 0.01f;
                         }
-                        else
-                        {
-                            return num;
-                        }
+                        Log.LogInfo("NEXT FRAC: " + nextPulseFraction);
+                        return nextPulseFraction;
                     });
+                    c.TryGotoNext(x => x.MatchLdarg(0));
+                    c.Index++;
+                    c.Emit(OpCodes.Ldc_I4_2);
+                    c.Emit(OpCodes.Mul);
                 };
                 this.UpdateText();
             }
@@ -79,8 +91,8 @@ namespace LeptonDaisyBuff
         private void UpdateText()
         {
             this.ReplaceString("ITEM_TPHEALINGNOVA_DESC", "Release a <style=cIsHealing>healing nova</style> during the Teleporter event, <style=cIsHealing>cleansing</style>"
-                + " and <style=cIsHealing>healing</style> all nearby allies for <style=cIsHealing>50%</style> of their maximum health. Occurs "
-                + "<style=cIsHealing>2</style> <style=cStack>(+1 per stack)</style> times.");
+                + " and <style=cIsHealing>healing</style> all nearby allies for <style=cIsHealing>35%</style> of their maximum health. Occurs "
+                + "<style=cIsHealing>3</style> <style=cStack>(+2 per stack)</style> times.");
         }
 
         private void ReplaceString(string token, string newText)
