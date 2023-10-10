@@ -24,7 +24,7 @@ namespace LeptonDaisyBuff
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "OakPrime";
         public const string PluginName = "LeptonDaisyBuff";
-        public const string PluginVersion = "1.1.0";
+        public const string PluginVersion = "1.1.2";
 
         private readonly Dictionary<string, string> DefaultLanguage = new Dictionary<string, string>();
 
@@ -68,12 +68,12 @@ namespace LeptonDaisyBuff
                     c.Emit(OpCodes.Ldarg_1);
                     c.EmitDelegate<Func<float, float, float>>((nextPulseFraction, prevPulseFraction) =>
                     {
-                        Log.LogInfo("PREVIOUS FRAC: " + prevPulseFraction);
+                        //Log.LogInfo("PREVIOUS FRAC: " + prevPulseFraction);
                         if (prevPulseFraction < 0.01f)
                         {
                             return 0.01f;
                         }
-                        Log.LogInfo("NEXT FRAC: " + nextPulseFraction);
+                        //Log.LogInfo("NEXT FRAC: " + nextPulseFraction);
                         return nextPulseFraction;
                     });
                     c.TryGotoNext(x => x.MatchLdarg(0));

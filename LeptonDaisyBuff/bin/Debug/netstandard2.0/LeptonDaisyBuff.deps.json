@@ -10,29 +10,30 @@
       "LeptonDaisyBuff/1.0.0": {
         "dependencies": {
           "BepInEx.Analyzers": "1.0.8",
-          "BepInEx.Core": "5.4.19",
-          "MMHOOK.RoR2": "2022.4.19",
+          "BepInEx.Core": "5.4.21",
+          "MMHOOK.RoR2": "2022.9.20",
           "NETStandard.Library": "2.0.3",
+          "R2API.Language": "1.0.1",
           "RiskOfRain2.GameLibs": "1.2.4-r.0",
-          "UnityEngine.Modules": "2019.4.26",
-          "R2API.Language": "1.0.1.0"
+          "UnityEngine": "5.6.1",
+          "UnityEngine.Modules": "2023.1.16"
         },
         "runtime": {
           "LeptonDaisyBuff.dll": {}
         }
       },
       "BepInEx.Analyzers/1.0.8": {},
-      "BepInEx.BaseLib/5.4.19": {
+      "BepInEx.BaseLib/5.4.20": {
         "runtime": {
           "lib/netstandard2.0/BepInEx.dll": {
-            "assemblyVersion": "5.4.19.0",
-            "fileVersion": "5.4.19.0"
+            "assemblyVersion": "5.4.20.0",
+            "fileVersion": "5.4.20.0"
           }
         }
       },
-      "BepInEx.Core/5.4.19": {
+      "BepInEx.Core/5.4.21": {
         "dependencies": {
-          "BepInEx.BaseLib": "5.4.19",
+          "BepInEx.BaseLib": "5.4.20",
           "HarmonyX": "2.7.0"
         }
       },
@@ -50,7 +51,7 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "MMHOOK.RoR2/2022.4.19": {
+      "MMHOOK.RoR2/2022.9.20": {
         "runtime": {
           "lib/MMHOOK_RoR2.dll": {
             "assemblyVersion": "0.0.0.0",
@@ -118,6 +119,37 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
+      "R2API.Core/5.0.8": {
+        "dependencies": {
+          "BepInEx.Core": "5.4.21",
+          "MMHOOK.RoR2": "2022.9.20",
+          "RiskOfRain2.GameLibs": "1.2.4-r.0",
+          "RoR2BepInExPack": "1.7.0",
+          "UnityEngine.Modules": "2023.1.16"
+        },
+        "runtime": {
+          "lib/netstandard2.0/R2API.Core.dll": {
+            "assemblyVersion": "5.0.8.0",
+            "fileVersion": "5.0.8.0"
+          }
+        }
+      },
+      "R2API.Language/1.0.1": {
+        "dependencies": {
+          "BepInEx.Core": "5.4.21",
+          "MMHOOK.RoR2": "2022.9.20",
+          "R2API.Core": "5.0.8",
+          "RiskOfRain2.GameLibs": "1.2.4-r.0",
+          "RoR2BepInExPack": "1.7.0",
+          "UnityEngine.Modules": "2023.1.16"
+        },
+        "runtime": {
+          "lib/netstandard2.0/R2API.Language.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
       "RiskOfRain2.GameLibs/1.2.4-r.0": {
         "runtime": {
           "lib/netstandard2.0/Assembly-CSharp.dll": {
@@ -179,6 +211,19 @@
           "lib/netstandard2.0/com.unity.multiplayer-hlapi.Runtime.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RoR2BepInExPack/1.7.0": {
+        "dependencies": {
+          "BepInEx.Core": "5.4.21",
+          "RiskOfRain2.GameLibs": "1.2.4-r.0",
+          "UnityEngine.Modules": "2023.1.16"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RoR2BepInExPack.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
           }
         }
       },
@@ -457,13 +502,17 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "UnityEngine.Modules/2019.4.26": {
+      "UnityEngine/5.6.1": {
         "runtime": {
-          "lib/netstandard2.0/UnityEngine.AIModule.dll": {
+          "lib/netstandard2.0/UnityEngine.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          },
-          "lib/netstandard2.0/UnityEngine.ARModule.dll": {
+          }
+        }
+      },
+      "UnityEngine.Modules/2023.1.16": {
+        "runtime": {
+          "lib/netstandard2.0/UnityEngine.AIModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -499,6 +548,14 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
+          "lib/netstandard2.0/UnityEngine.CommandStateObserverModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.ContentLoadModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
           "lib/netstandard2.0/UnityEngine.CoreModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
@@ -515,7 +572,15 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
+          "lib/netstandard2.0/UnityEngine.GIModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
           "lib/netstandard2.0/UnityEngine.GameCenterModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.GraphToolsFoundationModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -551,6 +616,10 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
+          "lib/netstandard2.0/UnityEngine.MarshallingModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
           "lib/netstandard2.0/UnityEngine.ParticleSystemModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
@@ -568,6 +637,14 @@
             "fileVersion": "0.0.0.0"
           },
           "lib/netstandard2.0/UnityEngine.ProfilerModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.PropertiesModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -611,7 +688,11 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
-          "lib/netstandard2.0/UnityEngine.TextCoreModule.dll": {
+          "lib/netstandard2.0/UnityEngine.TextCoreFontEngineModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.TextCoreTextEngineModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -631,11 +712,11 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
-          "lib/netstandard2.0/UnityEngine.UNETModule.dll": {
+          "lib/netstandard2.0/UnityEngine.UmbraModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
-          "lib/netstandard2.0/UnityEngine.UmbraModule.dll": {
+          "lib/netstandard2.0/UnityEngine.UnityAnalyticsCommonModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -644,6 +725,10 @@
             "fileVersion": "0.0.0.0"
           },
           "lib/netstandard2.0/UnityEngine.UnityConnectModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
+          "lib/netstandard2.0/UnityEngine.UnityCurlModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
@@ -687,6 +772,10 @@
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
           },
+          "lib/netstandard2.0/UnityEngine.VirtualTexturingModule.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          },
           "lib/netstandard2.0/UnityEngine.WindModule.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
@@ -698,14 +787,6 @@
           "lib/netstandard2.0/UnityEngine.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "R2API.Language/1.0.1.0": {
-        "runtime": {
-          "R2API.Language.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
           }
         }
       }
@@ -724,19 +805,19 @@
       "path": "bepinex.analyzers/1.0.8",
       "hashPath": "bepinex.analyzers.1.0.8.nupkg.sha512"
     },
-    "BepInEx.BaseLib/5.4.19": {
+    "BepInEx.BaseLib/5.4.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gwP3NK0WL5E+U/L0FMrygiDDNzEL4TYnezy+S7ocbUUhkhty3ueG5BRsKdKdra/2R3vWopf42CoA+MnnEmSY+w==",
-      "path": "bepinex.baselib/5.4.19",
-      "hashPath": "bepinex.baselib.5.4.19.nupkg.sha512"
+      "sha512": "sha512-0bXgYxbCEN2Ixp3kiFEhyw+RASeFQeg/ww+lbMt7if6XMeVS60eg6epNsMA8Jbx57dmNOzNevkKKw8mP8SUMqw==",
+      "path": "bepinex.baselib/5.4.20",
+      "hashPath": "bepinex.baselib.5.4.20.nupkg.sha512"
     },
-    "BepInEx.Core/5.4.19": {
+    "BepInEx.Core/5.4.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2/eY1qT2LaVO36G91LWo2yNLwmEEODKoC8IpePyA5WP2eGrrMvGxxLC9v4OPmX3IT8q1G4SYzKDL3ziZRQVUWg==",
-      "path": "bepinex.core/5.4.19",
-      "hashPath": "bepinex.core.5.4.19.nupkg.sha512"
+      "sha512": "sha512-NMUPlbHTTfJ+qIQCI90uIvjuUQ4wnwt4cpRsK3ItBh1DhsWFzAHXNiZjBxZkPysljEKQ2iu89sxMTga4bxBXVQ==",
+      "path": "bepinex.core/5.4.21",
+      "hashPath": "bepinex.core.5.4.21.nupkg.sha512"
     },
     "HarmonyX/2.7.0": {
       "type": "package",
@@ -759,12 +840,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "MMHOOK.RoR2/2022.4.19": {
+    "MMHOOK.RoR2/2022.9.20": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tUTJHikXhVAqg/+zXqsTQoRvPXVzpTOh8kQXpvQWG9fvu6rQnbxdbkYHffxva3/tCjf/TntyNFXKAnvT4xHpMg==",
-      "path": "mmhook.ror2/2022.4.19",
-      "hashPath": "mmhook.ror2.2022.4.19.nupkg.sha512"
+      "sha512": "sha512-4zXYtgP9DxGF5DZ3Az8h7E3hapSF1TipyaTceqoJY5LYK2rSbsiEEuXnYnXCuq13H9rs7oTzT4oVE4GpoIvLbg==",
+      "path": "mmhook.ror2/2022.9.20",
+      "hashPath": "mmhook.ror2.2022.9.20.nupkg.sha512"
     },
     "Mono.Cecil/0.11.4": {
       "type": "package",
@@ -794,12 +875,33 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
+    "R2API.Core/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lb3RiG+DJ2nzWtQRzHalu0pe5DPaboYI1L7ZJZKHNe5qtfupw93WparIw6v5aA3GURq80IB/dH9wt9dSOH1TgQ==",
+      "path": "r2api.core/5.0.8",
+      "hashPath": "r2api.core.5.0.8.nupkg.sha512"
+    },
+    "R2API.Language/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tvHvfYc8DIUjeYcWpaWo4g1ocH5giIhwo7HhSzGFFca6yERS4ztGRtZHPCgTnAwt3Rtv+l68oSaPfgB1LVP0Sw==",
+      "path": "r2api.language/1.0.1",
+      "hashPath": "r2api.language.1.0.1.nupkg.sha512"
+    },
     "RiskOfRain2.GameLibs/1.2.4-r.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-mzNQPEy8zlJY3yJMmfalXL7cgZJBgZkpe7wwZygLT7szj2dHhIlsm3FcGYL3tSYVYD2bcO5U2qxnRBaMj7qhCA==",
       "path": "riskofrain2.gamelibs/1.2.4-r.0",
       "hashPath": "riskofrain2.gamelibs.1.2.4-r.0.nupkg.sha512"
+    },
+    "RoR2BepInExPack/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Y3RLqQQL57Qt4IbprQ5NPHWVdcxPIJCJlazF+ajMWF8pjnwj49kzDvcBxb+nmlYWXiPvx+tL9KzYwoUGcZabA==",
+      "path": "ror2bepinexpack/1.7.0",
+      "hashPath": "ror2bepinexpack.1.7.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -990,17 +1092,19 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "UnityEngine.Modules/2019.4.26": {
+    "UnityEngine/5.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2d73AOFATaE0xsSY4qsK65CwT55e7g1myM7C5LMTdVRM57nAWpLWv8x/39uNHYjJQBnXqsQwsadk2H0xsyBsKA==",
-      "path": "unityengine.modules/2019.4.26",
-      "hashPath": "unityengine.modules.2019.4.26.nupkg.sha512"
+      "sha512": "sha512-uAhM+pBtZH7CvGCBQyT9CaksT9M4fzTCIMetYjOEocuFiQGF38uGgS8q5xUd1HddaeXwDG9VrMARHGz5IXhQLw==",
+      "path": "unityengine/5.6.1",
+      "hashPath": "unityengine.5.6.1.nupkg.sha512"
     },
-    "R2API.Language/1.0.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
+    "UnityEngine.Modules/2023.1.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hBC86f7BKi937ityAsQi2lv37PMDHrLUzBt4JPxBToIFhU4mOmoCTW1m1A3LxxdwaO1Hc8mDY7N3BmSrLhzjJQ==",
+      "path": "unityengine.modules/2023.1.16",
+      "hashPath": "unityengine.modules.2023.1.16.nupkg.sha512"
     }
   }
 }

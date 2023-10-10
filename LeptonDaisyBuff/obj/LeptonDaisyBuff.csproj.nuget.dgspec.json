@@ -55,11 +55,11 @@
             },
             "BepInEx.Core": {
               "target": "Package",
-              "version": "[5.4.19, )"
+              "version": "[5.4.21, )"
             },
             "MMHOOK.RoR2": {
               "target": "Package",
-              "version": "[2022.4.19, )",
+              "version": "[2022.9.20, )",
               "noWarn": [
                 "NU1701"
               ]
@@ -70,13 +70,23 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "R2API.Language": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "RiskOfRain2.GameLibs": {
               "target": "Package",
               "version": "[1.2.4-r.0, )"
             },
-            "UnityEngine.Modules": {
+            "UnityEngine": {
               "target": "Package",
-              "version": "[2019.4.26, )"
+              "version": "[5.6.1, )"
+            },
+            "UnityEngine.Modules": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2023.1.16, )"
             }
           },
           "imports": [
